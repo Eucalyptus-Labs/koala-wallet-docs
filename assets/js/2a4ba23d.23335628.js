@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkoala_wallet_docs=self.webpackChunkkoala_wallet_docs||[]).push([[2622],{1966:a=>{a.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);

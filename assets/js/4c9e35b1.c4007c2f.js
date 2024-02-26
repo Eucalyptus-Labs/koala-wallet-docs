@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkoala_wallet_docs=self.webpackChunkkoala_wallet_docs||[]).push([[2161],{4722:l=>{l.exports=JSON.parse('{"permalink":"/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
