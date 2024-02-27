@@ -20,17 +20,16 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
       "classic",
       {
         docs: {
           sidebarPath: "./sidebars.ts",
+          routeBasePath: "/",
         },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false,
+        pages: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -46,16 +45,10 @@ const config: Config = {
         alt: "Koala Wallet Logo",
         src: "img/logo.svg",
       },
+      hideOnScroll: true,
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
-        },
-        { to: "/blog", label: "Blog", position: "left" },
-        {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/Eucalyptus-Labs",
           label: "GitHub",
           position: "right",
         },
@@ -68,8 +61,16 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Intro",
+              to: "/",
+            },
+            {
+              label: "Basic Setup",
+              to: "/basic-setup",
+            },
+            {
+              label: "API Reference",
+              to: "/api-reference",
             },
           ],
         },
@@ -77,16 +78,20 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://discord.gg/koalawallet",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://twitter.com/koalawallet",
+            },
+            {
+              label: "TikTok",
+              href: "https://tiktok.com/@koalawallet",
+            },
+            {
+              label: "YouTube",
+              href: "https://youtube.com/@koalawallet",
             },
           ],
         },
@@ -94,21 +99,27 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
+              label: "Eucalyptus Labs",
+              href: "https://www.eucalyptuslabs.com/",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              label: "Koala Wallet",
+              href: "https://www.koalawallet.io/",
+            },
+            {
+              label: "Medium",
+              href: "https://medium.com/@koalawallet",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Eucalyptus Labs.`,
     },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+
+    colorMode: {
+      defaultMode: "dark", // Set default theme to dark
+      disableSwitch: true, // Disable theme switch
+      respectPrefersColorScheme: false, // Ignore system theme settings
     },
   } satisfies Preset.ThemeConfig,
 };
